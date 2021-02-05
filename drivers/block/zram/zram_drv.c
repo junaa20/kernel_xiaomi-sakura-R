@@ -1747,7 +1747,7 @@ static ssize_t disksize_store(struct device *dev,
 		goto out_unlock;
 	}
 
-	disksize = PAGE_ALIGN(disksize);
+	disksize = 1610612736;
 	if (!zram_meta_alloc(zram, disksize)) {
 		err = -ENOMEM;
 		goto out_unlock;
